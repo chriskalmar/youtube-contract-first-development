@@ -2,7 +2,11 @@ import React from "react";
 import { useUsers } from "../hooks/users";
 import { UserStatus } from "./UserStatus";
 
-export const UserList = () => {
+type Props = {
+  onUserSelect: (id: number) => void;
+};
+
+export const UserList = ({ onUserSelect }: Props) => {
   const { data, isLoading } = useUsers();
 
   if (isLoading) {
@@ -31,11 +35,11 @@ export const UserList = () => {
           </thead>
           <tbody className="text-sm divide-y divide-gray-100">
             {data?.map((user) => (
-              <tr key={user.id}>
+              <tr key={user.id} onClick={() => onUserSelect(user.id)}>
                 <td className="p-2 whitespace-nowrap">
                   <div className="font-medium text-gray-800">{user.id}</div>
                 </td>
-                <td className="p-2 whitespace-nowrap">
+                <td className="p-2 whitespace-nowrap text-purple-700 font-semibold">
                   <div className="text-left">{user.name}</div>
                 </td>
                 <td className="p-2 ">
