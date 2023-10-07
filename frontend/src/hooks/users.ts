@@ -15,4 +15,18 @@ const useUsers = () => {
   })
 }
 
-export { useUsers, fetchUsers }
+const fetchUserById = async (id: User['id']) => {
+  const response = await axios.get<Array<User>>('http://localhost:3010/users')
+
+  return response.data
+}
+
+const useUserById = (id: User['id']) => {
+  return useQuery({
+    queryKey: ['users', id],
+    queryFn: () => fetchUserById(id),
+  })
+}
+
+
+export { useUsers, fetchUsers, useUserById, fetchUserById }
