@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-import { User } from '../types'
 import { apiURL } from '../constants'
+import { User } from '../backend-api'
 
 const fetchUsers = async () => {
   const response = await axios.get<Array<User>>(`${apiURL}/users`)

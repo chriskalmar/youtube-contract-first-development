@@ -1,7 +1,7 @@
 import React from "react";
 import { useUserById } from "../hooks/users";
-import { User } from "../types";
 import { Card } from "./Card";
+import { User } from "../backend-api";
 
 type Props = {
   id?: User["id"];

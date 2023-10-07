@@ -1,7 +1,7 @@
 import React from "react";
 import { UserDetails } from "../components/UserDetails";
 import { UserList } from "../components/UserList";
-import { User } from "../types";
+import { User } from "../backend-api";
 
 export default function Home() {
   const [selectedUser, setSelectedUser] = React.useState<

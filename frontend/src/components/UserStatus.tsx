@@ -1,6 +1,6 @@
 import React from "react";
-import { User } from "../types";
 import { assertNever } from "../utils";
+import { User } from "../backend-api";
 
 type Props = {
   status: User["status"];
