@@ -1,7 +1,8 @@
 export interface User {
   id: number;
   email: string;
-  name: string;
-  status?: 'Happy' | 'Sad';
+  firstName: string;
+  lastName: string;
+  status?: 'Happy' | 'Sad' | 'Sleepy';
   phoneNumbers: string[];
 }
