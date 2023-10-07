@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <section className="bg-purple-100 text-gray-600 h-screen">
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full pt-12">
           <UserList onUserSelect={setSelectedUser} />
           <UserDetails id={selectedUser} />
         </div>
