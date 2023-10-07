@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "generate-backend-api-client": "swagger-typescript-api -p ../backend/build/swagger.json  -o src/ -n backend-api.ts -r --axios --union-enums --route-types --sort-types",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -23,6 +24,7 @@
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "postcss": "^8",
+    "swagger-typescript-api": "^13.0.3",
     "tailwindcss": "^3",
     "typescript": "^5"
   }
