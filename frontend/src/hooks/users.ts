@@ -21,12 +21,12 @@ const fetchUserById = async (id: User['id']) => {
   return response.data
 }
 
-const useUserById = (id: User['id']) => {
+const useUserById = (id?: User['id']) => {
   return useQuery({
     queryKey: ['users', id],
-    queryFn: () => fetchUserById(id),
+    queryFn: () => fetchUserById(id ?? 0),
+    enabled: !!id,
   })
 }
-
 
 export { useUsers, fetchUsers, useUserById, fetchUserById }
