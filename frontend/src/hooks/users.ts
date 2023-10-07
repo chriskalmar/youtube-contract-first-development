@@ -16,7 +16,7 @@ const useUsers = () => {
 }
 
 const fetchUserById = async (id: User['id']) => {
-  const response = await axios.get<Array<User>>('http://localhost:3010/users')
+  const response = await axios.get<User>(`http://localhost:3010/users/${id}`)
 
   return response.data
 }
