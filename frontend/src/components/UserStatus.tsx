@@ -12,6 +12,8 @@ export const UserStatus = ({ status = "Happy" }: Props) => {
       return "🥳";
     case "Sad":
       return "😢";
+    case "Sleepy":
+      return "😴";
     default:
       assertNever(status);
       return null;
