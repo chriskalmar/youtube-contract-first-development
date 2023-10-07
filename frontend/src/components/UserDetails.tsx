@@ -76,6 +76,13 @@ export const UserDetails = ({ id }: Props) => {
             />
           </div>
         </div>
+
+        <button
+          type="button"
+          className="border border-purple-500 bg-purple-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-purple-600 focus:outline-none focus:shadow-outline"
+        >
+          Update
+        </button>
       </>
     </UserDetailsWrapper>
   );
