@@ -35,7 +35,10 @@ export const UserList = ({ onUserSelect }: Props) => {
               <div className="font-semibold text-left">ID</div>
             </th>
             <th className="p-2 whitespace-nowrap">
-              <div className="font-semibold text-left">Name</div>
+              <div className="font-semibold text-left">First Name</div>
+            </th>
+            <th className="p-2 whitespace-nowrap">
+              <div className="font-semibold text-left">Last Name</div>
             </th>
             <th className="p-2 whitespace-nowrap">
               <div className="font-semibold text-center">Status</div>
@@ -48,8 +51,11 @@ export const UserList = ({ onUserSelect }: Props) => {
               <td className="p-2 whitespace-nowrap">
                 <div className="font-medium text-gray-800">{user.id}</div>
               </td>
+              <td className="p-2 whitespace-nowrap  font-semibold">
+                <div className="text-left">{user.firstName}</div>
+              </td>
               <td className="p-2 whitespace-nowrap text-purple-700 font-semibold">
-                <div className="text-left">{user.name}</div>
+                <div className="text-left">{user.lastName}</div>
               </td>
               <td className="p-2 ">
                 <div className="text-lg text-center">
