@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
-import { User } from '../types'
 import axios from 'axios'
+import { User } from '../types'
+import { apiURL } from '../constants'
 
 const fetchUsers = async () => {
-  const response = await axios.get<Array<User>>('http://localhost:3010/users')
+  const response = await axios.get<Array<User>>(`${apiURL}/users`)
 
   return response.data
 }
@@ -16,7 +17,7 @@ const useUsers = () => {
 }
 
 const fetchUserById = async (id: User['id']) => {
-  const response = await axios.get<User>(`http://localhost:3010/users/${id}`)
+  const response = await axios.get<User>(`${apiURL}/users/${id}`)
 
   return response.data
 }
