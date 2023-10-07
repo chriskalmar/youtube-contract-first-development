@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "generate-backend-api-client": "swagger-typescript-api -p ../backend/build/swagger.json  -o src/ -n backend-api.ts -r --axios --union-enums --route-types --sort-types",
-    "dev": "next dev",
+    "dev": "npm run generate-backend-api-client && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
