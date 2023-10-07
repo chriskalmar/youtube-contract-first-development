@@ -1,7 +1,7 @@
 import React from "react";
 import { useUserById } from "../hooks/users";
 import { User } from "../types";
-import { UserDetailsWrapper } from "./UserDetailsWrapper";
+import { Card } from "./Card";
 
 type Props = {
   id?: User["id"];
@@ -12,26 +12,26 @@ export const UserDetails = ({ id }: Props) => {
 
   if (!id) {
     return (
-      <UserDetailsWrapper>
+      <Card title="User Details">
         <div className="p-8 text-center text-gray-500">Select user ☝️</div>
-      </UserDetailsWrapper>
+      </Card>
     );
   } else if (isLoading) {
     return (
-      <UserDetailsWrapper>
+      <Card title="User Details">
         <div className="p-8 text-center text-gray-500">Loading ...</div>
-      </UserDetailsWrapper>
+      </Card>
     );
   } else if (!data) {
     return (
-      <UserDetailsWrapper>
+      <Card title="User Details">
         <div className="p-8 text-center text-red-500">Not found</div>
-      </UserDetailsWrapper>
+      </Card>
     );
   }
 
   return (
-    <UserDetailsWrapper>
+    <Card title={`User Details for ID: ${id}`}>
       <>
         <div className="-mx-3 md:flex mb-6">
           <div className="md:w-full px-3 mb-6 md:mb-0">
@@ -74,6 +74,6 @@ export const UserDetails = ({ id }: Props) => {
           Update
         </button>
       </>
-    </UserDetailsWrapper>
+    </Card>
   );
 };
