@@ -34,18 +34,32 @@ export const UserDetails = ({ id }: Props) => {
     <Card title={`User Details for ID: ${id}`}>
       <>
         <div className="-mx-3 md:flex mb-6">
-          <div className="md:w-full px-3 mb-6 md:mb-0">
+          <div className="md:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-              for="grid-name"
+              for="grid-first-name"
             >
-              Name
+              First Name
             </label>
             <input
               className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
-              id="grid-name"
+              id="grid-first-name"
               type="text"
-              value={data.name}
+              value={data.firstName}
+            />
+          </div>
+          <div className="md:w-1/2 px-3 mb-6 md:mb-0">
+            <label
+              className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+              for="grid-last-name"
+            >
+              Last Name
+            </label>
+            <input
+              className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
+              id="grid-last-name"
+              type="text"
+              value={data.lastName}
             />
           </div>
         </div>
