@@ -1,5 +1,6 @@
 import React from "react";
 import { useUserById } from "../hooks/users";
+import { User } from "../types";
 
 const UserDetailsWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -12,8 +13,12 @@ const UserDetailsWrapper = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export const UserDetails = () => {
-  const { data, isLoading } = useUserById(1);
+type Props = {
+  id?: User["id"];
+};
+
+export const UserDetails = ({ id }: Props) => {
+  const { data, isLoading } = useUserById(id);
 
   if (isLoading) {
     return <UserDetailsWrapper>Loading ...</UserDetailsWrapper>;
