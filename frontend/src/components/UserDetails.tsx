@@ -25,7 +25,7 @@ export const UserDetails = ({ id }: Props) => {
   } else if (!data) {
     return (
       <UserDetailsWrapper>
-        <div className="p-8 text-center text-gray-500">Not found</div>
+        <div className="p-8 text-center text-red-500">Not found</div>
       </UserDetailsWrapper>
     );
   }
