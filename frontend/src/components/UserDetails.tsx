@@ -20,12 +20,24 @@ type Props = {
 export const UserDetails = ({ id }: Props) => {
   const { data, isLoading } = useUserById(id);
 
-  if (isLoading) {
-    return <UserDetailsWrapper>Loading ...</UserDetailsWrapper>;
-  }
-
-  if (!data) {
-    return <UserDetailsWrapper>Not found</UserDetailsWrapper>;
+  if (!id) {
+    return (
+      <UserDetailsWrapper>
+        <div className="p-8 text-center text-gray-500">Select user ☝️</div>
+      </UserDetailsWrapper>
+    );
+  } else if (isLoading) {
+    return (
+      <UserDetailsWrapper>
+        <div className="p-8 text-center text-gray-500">Loading ...</div>
+      </UserDetailsWrapper>
+    );
+  } else if (!data) {
+    return (
+      <UserDetailsWrapper>
+        <div className="p-8 text-center text-gray-500">Not found</div>
+      </UserDetailsWrapper>
+    );
   }
 
   return (
