@@ -1,7 +1,7 @@
 import { userDb } from './data';
 import { User } from './user';
 
-export type UserCreationParams = Pick<User, 'email' | 'name' | 'phoneNumbers'>;
+export type UserCreationParams = Pick<User, 'email' | 'firstName' | 'lastName' | 'phoneNumbers'>;
 
 export class UsersService {
   public getAll() {
