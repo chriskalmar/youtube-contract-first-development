@@ -37,7 +37,7 @@ export const UserDetails = ({ id }: Props) => {
           <div className="md:w-full px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-              for="grid-name"
+              htmlFor="grid-name"
             >
               Name
             </label>
@@ -54,7 +54,7 @@ export const UserDetails = ({ id }: Props) => {
           <div className="md:w-full px-3">
             <label
               className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
-              for="grid-email"
+              htmlFor="grid-email"
             >
               Email
             </label>
