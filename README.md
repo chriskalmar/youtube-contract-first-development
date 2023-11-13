@@ -2,6 +2,10 @@
 
 This repo was built during the recording of a YouTube tutorial on Contract-first development.
 
+[![2023-11-contract-first-development](https://github.com/chriskalmar/youtube-contract-first-development/assets/8336893/33e75e49-1658-4131-aaa0-eb87dec97b9e)](https://youtu.be/AVT0FUKcvvk)
+
+![Tutorial screenshot](https://github.com/chriskalmar/youtube-contract-first-development/assets/8336893/ef9ad1aa-21f5-4eb4-b459-d6011e22f0d6)
+
 ## Stack
 
 - Next.js
